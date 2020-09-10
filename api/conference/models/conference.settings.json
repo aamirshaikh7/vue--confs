@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conferences",
+  "info": {
+    "name": "Conference"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "fee": {
+      "type": "decimal"
+    },
+    "duration": {
+      "type": "decimal"
+    },
+    "categories": {
+      "via": "conferences",
+      "collection": "category"
+    }
+  }
+}
