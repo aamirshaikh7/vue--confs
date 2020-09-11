@@ -9,6 +9,7 @@
         <g-link class="nav__link" to="/about/">About</g-link>
       </nav>
     </header>
+    <p><strong>{{ $static.metadata.siteDescription }}</strong></p>
     <slot/>
   </div>
 </template>
@@ -16,7 +17,8 @@
 <static-query>
 query {
   metadata {
-    siteName
+    siteName,
+    siteDescription
   }
 }
 </static-query>
